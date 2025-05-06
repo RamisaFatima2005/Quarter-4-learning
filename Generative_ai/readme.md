@@ -1,4 +1,5 @@
-📚 What is Generative AI?
+**📚 What is Generative AI?**
+
 I recently wrote a blog on Medium explaining what Generative AI is in a simple and easy-to-understand way.
 In the blog, I shared:
 
