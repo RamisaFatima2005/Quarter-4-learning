@@ -45,9 +45,8 @@ Both examples give the same result, but the second one is much shorter and easie
 The system prompt gives instructions to the Agent - like how it should behave or answer. We keep it inside the Agent class so everything about the Agent is in one place.
 
 We make the Agent callable so we can use it like a function:
+response = agent("Hello")
 
-```response = agent("Hello")
-```
 
 This is shorter and easier than writing a full method name.
 
