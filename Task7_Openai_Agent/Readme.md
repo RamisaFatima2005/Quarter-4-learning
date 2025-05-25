@@ -65,8 +65,8 @@ agent = Agent("Helper", "Be friendly")
 print(agent("How are you?"))
 ```
 ### Output:
-```Be friendly | Message: How are you?
-```
+Be friendly | Message: How are you?
+
 
 **2b. Why is the user prompt passed as a parameter in the run method of Runner, and why is run a classmethod?**
 
@@ -83,8 +83,8 @@ The run method is a classmethod because it can be called without creating an obj
 print(Runner.run("What is AI?"))
 ```
 ### Output:
-```User asked: What is AI?
-```
+User asked: What is AI?
+
 
 **3. What is the purpose of the Runner class?**
 
@@ -114,8 +114,8 @@ print(Runner.run("Hello, how are you?"))
 ```
 
 ### Output:
-```Agent says: Hello, how are you?
-```
+Agent says: Hello, how are you?
+
 
 So, the Runner is like a helper that runs the whole process smoothly.
 
