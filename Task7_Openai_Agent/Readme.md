@@ -1,4 +1,4 @@
-#Why is the Agent class defined as a dataclass?
+##Why is the Agent class defined as a dataclass?
 
 The @dataclass in Python makes it easier to create classes that store data. It automatically adds common functions like:
 
