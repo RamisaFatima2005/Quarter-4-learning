@@ -1,4 +1,4 @@
-Prompt. Exercise:
+## Prompt Exercise:
 
 1. What's the weather going to be like in Dubai tomorrow afternoon?
 
