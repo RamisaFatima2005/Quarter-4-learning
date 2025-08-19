@@ -2,6 +2,7 @@ from agents import Agent, Runner, AsyncOpenAI, OpenAIChatCompletionsModel, funct
 import requests
 from dotenv import load_dotenv, find_dotenv
 import os
+# import rich
 
 load_dotenv(find_dotenv())
 # set_tracing_disabled(True)
@@ -58,6 +59,6 @@ result = Runner.run_sync(
     run_config=config
 )
 # print('='*50)
-# print("Result: ",result.last_agent.name)
+# rich.print("Result: ",result.last_agent.name)
 # print(result.new_items)
 print("Result: ",result.final_output)
