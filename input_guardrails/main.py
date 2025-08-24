@@ -2,16 +2,12 @@ import os
 import asyncio
 from agents import (
     Agent, Runner, AsyncOpenAI, OpenAIChatCompletionsModel,
-    InputGuardrailTripwireTriggered, TResponseInputItem, input_guardrail, GuardrailFunctionOutput
+    InputGuardrailTripwireTriggered, TResponseInputItem, input_guardrail, GuardrailFunctionOutput, RunConfig
 )
-from agents.run import RunConfig
 import rich
 from dotenv import load_dotenv
 from pydantic import BaseModel
 
-# -----------------------------
-# Load API Keys
-# -----------------------------
 load_dotenv()
 gemini_api_key = os.getenv("GEMINI_API_KEY")
 if not gemini_api_key:
@@ -25,6 +21,12 @@ external_client = AsyncOpenAI(
 model = OpenAIChatCompletionsModel(
     model="gemini-2.0-flash",
     openai_client=external_client,
+)
+
+config = RunConfig(
+    model=model,
+    model_provider=external_client,
+    tracing_disabled=True
 )
 
 
@@ -67,7 +69,7 @@ async def main():
             # 👇 Prompt (change class timings request → tripwire should trigger)
             # input="Sir can you please explain me topic again?",
             input="Sir, can you please change my class timings😭😭",
-            # run_config=config
+            run_config=config
         )
         rich.print("[bold green]Final Output:[/bold green]", result.final_output)
 
